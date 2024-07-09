@@ -1,0 +1,302 @@
+﻿:root {
+    --first-color: #594014;
+    --second-color: #694912;
+    --third-color: #916413;
+    --fourth-color: #c4c5b0;
+    --fifth-color: #ffffff;
+    --primary-font: 'Roboto', sans-serif;
+    --secundary-font: 'Lato', sans-serif;
+}
+
+/*Estilos Generales*/
+body {
+    min-height: 100vh;
+    background-color: var(--first-color);
+}
+
+.body-over {
+    overflow-y: hidden;
+}
+
+.body-content {
+    color: teal;
+}
+
+h3 {
+    color: white;
+    font-family: var(--primary-font);
+    font-size: 2em;
+    margin-bottom: 0;
+}
+
+a {
+    color: inherit;
+}
+
+    a:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+
+button {
+    border: none;
+    outline: none !important;
+}
+
+.price::before {
+    content: 'S/. ';
+}
+
+.kg::after {
+    content: 'Kg.';
+}
+
+.row {
+    justify-content: center
+}
+
+/* Loading Page */
+.panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--first-color);
+    z-index: 1000;
+}
+
+.border {
+    border-radius: 50%;
+    border: initial !important;
+    background: var(--third-color);
+    background: linear-gradient(90deg, var(--third-color) 44%, var(--fifth-color) 79%);
+    animation: spin 1s linear infinite;
+    padding: 5px;
+}
+
+.loader {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background-color: var(--first-color);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* Fin loading Page */
+
+
+/*Navbar*/
+.navbar {
+    color: var(--fifth-color);
+    font-family: var(--primary-font);
+    font-weight: 700;
+    border-bottom: 2px solid var(--second-color);
+}
+
+.navbar-brand img {
+    width: 50px;
+}
+/*Fin Navbar*/
+
+.top-title {
+    position: relative;
+}
+
+    .top-title h3 {
+        text-align: center;
+    }
+
+    .top-title .back-to {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        font-size: 18px;
+        font-family: var(--secundary-font);
+    }
+
+/*Cards Index Page*/
+.card-ind {
+    background-color: var(--second-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--fifth-color);
+    border-radius: 5px;
+    font-family: var(--secundary-font);
+    font-weight: 700;
+    text-align: center;
+    transition: all .4s ease-in-out;
+    position: relative;
+}
+
+    .card-ind:hover {
+        color: var(--fifth-color);
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+
+.card-img i {
+    font-size: 5em;
+}
+
+.card-img.double i {
+    font-size: 3.5em;
+}
+
+.double b {
+    margin: 0 5px;
+    height: 50px;
+    width: 2px;
+    background-color: var(--fifth-color);
+    display: inline-block;
+}
+
+.card-tit {
+    font-size: 1.5em;
+}
+
+button.card-ind {
+    width: 100%;
+}
+
+.cost {
+    background-color: var(--fourth-color);
+    color: var(--first-color);
+}
+
+    .cost:hover {
+        color: var(--first-color);
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+    }
+/*Fin Cards Index Page*/
+/*Table pagination */
+.t-dark {
+    margin-bottom: 1rem;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: var(--second-color);
+    color: var(--fifth-color);
+    font-family: var(--secundary-font);
+}
+
+.form-control {
+    background-color: var(--second-color);
+    color: var(--fifth-color);
+    border: none;
+}
+
+    .form-control:focus {
+        background-color: var(--second-color) !important;
+        color: var(--fifth-color);
+        border-color: var(--third-color);
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem var(--third-color);
+    }
+
+.pagination {
+    margin: 0;
+}
+
+    .pagination li:hover {
+        cursor: pointer;
+    }
+
+.header_wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.num_rows,
+.tb_search {
+    width: 20%;
+}
+
+.footer-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-link {
+    border: none;
+    color: var(--first-color);
+    font-weight: 600;
+}
+
+.page-item.active .page-link {
+    background-color: var(--second-color);
+    color: var(--fifth-color);
+}
+
+
+
+/*Sweet Alert Dark*/
+.swal2-popup {
+    background-color: var(--first-color) !important;
+}
+
+.swal2-title,
+.swal2-html-container {
+    color: var(--fifth-color) !important;
+}
+
+
+
+/*Report*/
+.report-info {
+    display: flex;
+}
+
+.canvas {
+    position: relative;
+    width: 50vw;
+}
+
+#totalSales {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+.circle {
+    display: flex;
+    align-items: center;
+}
+
+.info {
+    margin-left: 10px;
+}
+
+.progressTitle {
+    font-weight: 300;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.4);
+    overflow-x: auto;
+}
+
+.progressBar {
+    height: 100px;
+    width: 100px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 100px;
+}
